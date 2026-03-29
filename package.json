@@ -1,0 +1,16 @@
+{
+  "name": "cforge-nestjs",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ],
+  "scripts": {
+    "dev:auth": "npm --workspace=services/auth run start",
+    "dev:all": "concurrently \"npm run dev:auth\"",
+    "build": "echo build all services"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
